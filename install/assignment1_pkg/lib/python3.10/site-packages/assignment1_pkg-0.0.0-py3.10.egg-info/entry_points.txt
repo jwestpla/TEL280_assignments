@@ -1,0 +1,3 @@
+[console_scripts]
+laserscan_subscriber = assignment1_pkg.laserscan_subscriber:main
+

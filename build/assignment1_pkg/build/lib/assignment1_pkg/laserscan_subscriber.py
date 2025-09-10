@@ -1,6 +1,5 @@
 import rclpy
 from rclpy.node import Node
-from rclpy.qos import QoSProfile, ReliabilityPolicy
 from sensor_msgs.msg import LaserScan
 
 class LaserscanSubscriber(Node):
@@ -10,7 +9,7 @@ class LaserscanSubscriber(Node):
             msg_type = LaserScan,
             topic = "/scan",
             callback=self.listener_callback,
-            qos_profile= QoSProfile(depth=10, reliability=ReliabilityPolicy.RELIABLE) #ros2 topic info /scan -v
+            qos_profile= 10#QoSProfile(depth=10, reliability=ReliabiltyProfile.RELIABLE) #??
         )
     
     def listener_callback(self, msg):
@@ -29,5 +28,4 @@ def main(args=None):
 
 if __name__ == '__main__':
     main()
-
 

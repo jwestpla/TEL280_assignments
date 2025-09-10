@@ -1,0 +1,37 @@
+[0.625s] Invoking command in '/home/daimen/Documents/TEL280_assignments/assignment1_pkg': PYTHONPATH=/home/daimen/Documents/TEL280_assignments/build/assignment1_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/daimen/Documents/TEL280_assignments/install/assignment1_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/assignment1_pkg build --build-base /home/daimen/Documents/TEL280_assignments/build/assignment1_pkg/build install --record /home/daimen/Documents/TEL280_assignments/build/assignment1_pkg/install.log --single-version-externally-managed install_data
+[0.869s] running egg_info
+[0.869s] creating ../build/assignment1_pkg/assignment1_pkg.egg-info
+[0.870s] writing ../build/assignment1_pkg/assignment1_pkg.egg-info/PKG-INFO
+[0.870s] writing dependency_links to ../build/assignment1_pkg/assignment1_pkg.egg-info/dependency_links.txt
+[0.870s] writing entry points to ../build/assignment1_pkg/assignment1_pkg.egg-info/entry_points.txt
+[0.870s] writing requirements to ../build/assignment1_pkg/assignment1_pkg.egg-info/requires.txt
+[0.870s] writing top-level names to ../build/assignment1_pkg/assignment1_pkg.egg-info/top_level.txt
+[0.871s] writing manifest file '../build/assignment1_pkg/assignment1_pkg.egg-info/SOURCES.txt'
+[0.873s] reading manifest file '../build/assignment1_pkg/assignment1_pkg.egg-info/SOURCES.txt'
+[0.874s] writing manifest file '../build/assignment1_pkg/assignment1_pkg.egg-info/SOURCES.txt'
+[0.874s] running build
+[0.874s] running build_py
+[0.875s] creating /home/daimen/Documents/TEL280_assignments/build/assignment1_pkg/build
+[0.875s] creating /home/daimen/Documents/TEL280_assignments/build/assignment1_pkg/build/lib
+[0.875s] creating /home/daimen/Documents/TEL280_assignments/build/assignment1_pkg/build/lib/assignment1_pkg
+[0.875s] copying assignment1_pkg/__init__.py -> /home/daimen/Documents/TEL280_assignments/build/assignment1_pkg/build/lib/assignment1_pkg
+[0.875s] copying assignment1_pkg/laserscan_subscriber.py -> /home/daimen/Documents/TEL280_assignments/build/assignment1_pkg/build/lib/assignment1_pkg
+[0.875s] running install
+[0.875s] running install_lib
+[0.876s] creating /home/daimen/Documents/TEL280_assignments/install/assignment1_pkg/lib/python3.10/site-packages/assignment1_pkg
+[0.876s] copying /home/daimen/Documents/TEL280_assignments/build/assignment1_pkg/build/lib/assignment1_pkg/__init__.py -> /home/daimen/Documents/TEL280_assignments/install/assignment1_pkg/lib/python3.10/site-packages/assignment1_pkg
+[0.876s] copying /home/daimen/Documents/TEL280_assignments/build/assignment1_pkg/build/lib/assignment1_pkg/laserscan_subscriber.py -> /home/daimen/Documents/TEL280_assignments/install/assignment1_pkg/lib/python3.10/site-packages/assignment1_pkg
+[0.877s] byte-compiling /home/daimen/Documents/TEL280_assignments/install/assignment1_pkg/lib/python3.10/site-packages/assignment1_pkg/__init__.py to __init__.cpython-310.pyc
+[0.877s] byte-compiling /home/daimen/Documents/TEL280_assignments/install/assignment1_pkg/lib/python3.10/site-packages/assignment1_pkg/laserscan_subscriber.py to laserscan_subscriber.cpython-310.pyc
+[0.877s] running install_data
+[0.878s] creating /home/daimen/Documents/TEL280_assignments/install/assignment1_pkg/share/ament_index
+[0.878s] creating /home/daimen/Documents/TEL280_assignments/install/assignment1_pkg/share/ament_index/resource_index
+[0.878s] creating /home/daimen/Documents/TEL280_assignments/install/assignment1_pkg/share/ament_index/resource_index/packages
+[0.878s] copying resource/assignment1_pkg -> /home/daimen/Documents/TEL280_assignments/install/assignment1_pkg/share/ament_index/resource_index/packages
+[0.878s] copying package.xml -> /home/daimen/Documents/TEL280_assignments/install/assignment1_pkg/share/assignment1_pkg
+[0.878s] running install_egg_info
+[0.880s] Copying ../build/assignment1_pkg/assignment1_pkg.egg-info to /home/daimen/Documents/TEL280_assignments/install/assignment1_pkg/lib/python3.10/site-packages/assignment1_pkg-0.0.0-py3.10.egg-info
+[0.881s] running install_scripts
+[0.899s] Installing laserscan_subscriber script to /home/daimen/Documents/TEL280_assignments/install/assignment1_pkg/lib/assignment1_pkg
+[0.899s] writing list of installed files to '/home/daimen/Documents/TEL280_assignments/build/assignment1_pkg/install.log'
+[0.922s] Invoked command in '/home/daimen/Documents/TEL280_assignments/assignment1_pkg' returned '0': PYTHONPATH=/home/daimen/Documents/TEL280_assignments/build/assignment1_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/daimen/Documents/TEL280_assignments/install/assignment1_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/assignment1_pkg build --build-base /home/daimen/Documents/TEL280_assignments/build/assignment1_pkg/build install --record /home/daimen/Documents/TEL280_assignments/build/assignment1_pkg/install.log --single-version-externally-managed install_data
