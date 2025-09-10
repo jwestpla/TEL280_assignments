@@ -7,10 +7,10 @@ class LaserscanSubscriber(Node):
     def __init__(self):
         super().__init__("laserscan_subscriber")
         self.subscription = self.create_subscription(
-            msg_type = LaserScan,
-            topic = "/scan",
-            callback=self.listener_callback,
-            qos_profile= QoSProfile(depth=10, reliability=ReliabilityPolicy.RELIABLE) #ros2 topic info /scan -v
+            LaserScan, #message
+            "/scan", #topic
+            self.listener_callback,
+            QoSProfile(depth=10, reliability=ReliabilityPolicy.BEST_EFFORT) # ros2 topic info /scan -v
         )
     
     def listener_callback(self, msg):
