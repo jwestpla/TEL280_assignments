@@ -14,11 +14,11 @@ class LaserscanSubscriber(Node):
         )
     
     def listener_callback(self, msg):
-        distances = msg.ranges
-        if any(dist < 1 for dist in distances): 
-            self.get_logger().info('Obstacle')
+        ranges = msg.ranges
+        if any(range < 1 for range in ranges):
+            self.get_logger().info("Obstacle")
         else:
-            self.get_logger().info('Free')
+            self.get_logger().info("Free")
 
 def main(args=None):
     rclpy.init(args = args)
