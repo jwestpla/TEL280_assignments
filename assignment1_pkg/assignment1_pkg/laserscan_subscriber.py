@@ -17,7 +17,7 @@ class LaserscanSubscriber(Node):
     
     def listener_callback(self, msg):
         distances = msg.ranges
-        distance_treshold = 1 #in meters
+        distance_treshold = 1.0 #in meters
         if any(dist < distance_treshold for dist in distances): 
             self.get_logger().info('Obstacle')
         else:
