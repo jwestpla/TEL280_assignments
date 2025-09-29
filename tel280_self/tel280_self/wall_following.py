@@ -222,46 +222,6 @@ class WallFollowing(Node):
 
         return list_of_lines
 
-    def prune_line_by_gap(self, inlier_pts, gap_thresh=0.12, min_len=0.8, min_pts=15, reduce=True):
-        if len(inlier_pts) < 2: 
-            return None, None, None
-
-        # linjeretning via total least squares (stabilt også for vertikale linjer)
-        c = inlier_pts.mean(axis=0)
-        _, _, vh = np.linalg.svd(inlier_pts - c)
-        d = vh[0] / np.linalg.norm(vh[0])      # line_dir (2,)
-
-        # projisér punkter langs linja og sorter
-        s = (inlier_pts - c) @ d               # (N,)
-        order = np.argsort(s)
-        s_sorted = s[order]
-
-        gaps = np.diff(s_sorted)
-        has_gap = np.any(gaps > gap_thresh)
-
-        if has_gap and not reduce:
-            return None, None, None  # kast hele linja
-
-        # del på hull og velg beste del (flest punkter, ties→størst utstrekning)
-        cuts = np.where(gaps > gap_thresh)[0]
-        clusters = np.split(order, cuts + 1) if has_gap else [order]
-        def key(idx): 
-            return (len(idx), s[idx].max() - s[idx].min())
-        best = max(clusters, key=key)
-
-        if len(best) < min_pts:
-            return None, None, None
-
-        s_min, s_max = s[best].min(), s[best].max()
-        p1, p2 = c + s_min * d, c + s_max * d
-        if np.linalg.norm(p2 - p1) < min_len:
-            return None, None, None
-
-        keep_mask = np.zeros(len(inlier_pts), dtype=bool)
-        keep_mask[best] = True
-        return p1, p2, keep_mask
-
-
 def main(args=None):
     rclpy.init(args = args)
     node = WallFollowing()
